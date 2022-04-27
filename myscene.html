@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello, WebVR! • A-Frame</title>
+  <meta name="description" content="Hello, WebVR! • A-Frame">
+  <!-- import aframe js library -->
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+  <!-- every aframe scene starts with a-scene tag -->
+  <a-scene stats>
+    <!-- asset section  -->
+    <a-assets>
+      <img id="sky" src="img/scene.jpg">
+      <a-asset-item id="model" src="animated_rhinoceros_walking_animal_loop/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <!-- sky -->
+    <a-sky src="#sky"></a-sky>
+    <a-entity position="10,2,5;" gltf-model="#model" animation-mixer></a-entity>
+  </a-scene>
+
+</body>
+
+</html>
